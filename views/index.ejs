@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>This is the index page</h1>
+    <p><a href="/sub">Go to subpage</a></p>
+    <button type="button">Click to download image</button>
+    <p><img id="img" /></p>
+    <script type="text/javascript">
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const results = await fetch("/downloadimg");
+        document.getElementById("img").setAttribute("src", "/downloadimg");
+      });
+    </script>
+  </body>
+</html>

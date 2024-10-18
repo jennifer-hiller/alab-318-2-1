@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>This is the sub page</h1>
+    <p><a href="/">Go to index</a></p>
+    <form method="post" action="/posting">
+      <input type="text" name="name" id="name" placeholder="Your Name" />
+      <button>Submit</button>
+    </form>
+    <!-- <script type="text/javascript">
+      const form = document.querySelector("form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const body = {
+          name: document.getElementById("name").value,
+        };
+        await fetch("/posting", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+      });
+    </script> -->
+  </body>
+</html>
